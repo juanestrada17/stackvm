@@ -1,0 +1,10 @@
+cmake_minimum_required(VERSION 3.31.1)
+project(vmachine VERSION 0.1.0 LANGUAGES C CXX)
+
+list(APPEND CMAKE_PREFIX_PATH "${CMAKE_SOURCE_DIR}/vcpkg_installed/x64-windows")
+
+add_executable(sasm sasm/lexer.cpp sasm/sasm.cpp)
+
+add_executable(stack-vm stack-vm/main.cpp stack-vm/stack-vm.cpp)
+
+#  stack-vm/main.cpp stack-vm/stack-vm.cpp
