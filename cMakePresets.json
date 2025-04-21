@@ -1,0 +1,17 @@
+{
+  "version": 8,
+  "configurePresets": [
+    {
+      "name": "vmachine",
+      "displayName": "Configure preset",
+      "description": "Sets ninja generator",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/out/build/${presetName}",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_TOOLCHAIN_FILE": "C:/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}"
+      }
+    }
+  ]
+}
