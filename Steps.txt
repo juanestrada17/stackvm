@@ -1,0 +1,41 @@
+Objective = Create a mini VM that reasds a list of instructions (from file or array) and executes them
+
+
+Example instructions = 
+LOAD A
+0x10
+ADD A 
+B
+JUMP 0x200
+---
+
+FIRST PART 
+1. Determine registers and how many => A, B, C, D.
+2. Memory Size = 256 bytes - 4K array 
+3. Set up a PC to track execution position 
+4. Add a stack pointer.  (CALL/RET)
+
+
+SECOND PART 
+1. Choose instruction formal and supported instructions. 
+2. Create an enum or set of opcodes for decoding. 
+
+THIRD PART 
+1. create a class to hold:
+    - Registers 
+    - Memory
+    - PC
+    - Flags 
+    - Running state 
+FOURTH PART
+1. Load instructions from array or file. 
+2. parse and load them into memory
+
+FIFTH PART 
+DECODE AND EXECUTE 
+1. fetch from memory at pc -> decode opcode -> execute logic -> increment pc 
+
+
+https://www.youtube.com/watch?v=BNXP0w4Ppto&ab_channel=PhilipBohun
+
+https://www.youtube.com/watch?v=7pLCpN811tQ&ab_channel=DmitrySoshnikov
