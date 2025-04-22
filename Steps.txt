@@ -39,3 +39,14 @@ DECODE AND EXECUTE
 https://www.youtube.com/watch?v=BNXP0w4Ppto&ab_channel=PhilipBohun
 
 https://www.youtube.com/watch?v=7pLCpN811tQ&ab_channel=DmitrySoshnikov
+
+// Cmake tips 
+
+1. Create the cMakelists.txt 
+2. Create the cMakePresets.json -> give it a name and the path where we want it to store the exe
+3. use => cmake --preset vmachine - vmachine is the name used in the presets. 
+4. use => cmake --build path/to/folder this is the folder with the exes 
+5. In our program we use the sasm first with test.sams as the variable in order to create the bin file => ./out/build/vmachine/sasm.exe ./sasm/test.sasm    
+6. After we have the bin file, we use the command => ./out/build/vmachine/stack-vm.exe out.bin 
+
+cmake --build out/build/vmachine --target run-all

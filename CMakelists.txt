@@ -7,4 +7,25 @@ add_executable(sasm sasm/lexer.cpp sasm/sasm.cpp)
 
 add_executable(stack-vm stack-vm/main.cpp stack-vm/stack-vm.cpp)
 
-#  stack-vm/main.cpp stack-vm/stack-vm.cpp
+
+# Alternative for doing both actions in a single command. 
+# Output binary name. It stores the path where the .bin will be stored. 
+# set(OUTPUT_BIN "${CMAKE_BINARY_DIR}/out.bin")
+
+# add_custom_command(
+#     OUTPUT ${OUTPUT_BIN}
+#     # Runs sasm command on the test.sasm 
+#     COMMAND sasm ${CMAKE_SOURCE_DIR}/sasm/test.sasm -o ${OUTPUT_BIN}
+#     # If the files change, cmkae will re-run this command
+#     DEPENDS sasm ${CMAKE_SOURCE_DIR}/sasm/test.sasm
+#     COMMENT "Assembling test.sasm..."
+# )
+
+# # Can be run with cmake --build . --target run-all 
+# # make run-all
+# add_custom_target(run-all
+#     COMMAND sasm ${CMAKE_SOURCE_DIR}/sasm/test.sasm -o ${OUTPUT_BIN}
+#     COMMAND stack-vm ${OUTPUT_BIN}
+#     DEPENDS ${OUTPUT_BIN}
+#     COMMENT "Running the VM with the assembled binary..."
+# )
